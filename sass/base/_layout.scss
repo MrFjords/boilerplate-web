@@ -1,0 +1,43 @@
+%centerBlock {
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+
+.wrapper {
+	max-width: $wrapper;
+	max-width: calculateRem($wrapper);
+	@extend %centerBlock;
+	&.box {
+		max-width: $wrapper - (2 * $gutter-size);
+		max-width: calculateRem($wrapper - (2 * $gutter-size));
+	}
+}
+
+.center-block {
+	@extend %centerBlock;
+}
+
+.box {
+	padding: 0 $gutter-size;
+	padding: 0 calculateRem($gutter-size);
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.block {
+	display: block;
+}
+
+.inline-block {
+	@include inlineBlock;
+}
+
+.affix {
+  position: fixed;
+}

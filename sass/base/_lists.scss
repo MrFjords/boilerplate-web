@@ -1,0 +1,28 @@
+ul ul, ul ol, ol ul, ol ol {
+	margin-bottom: 0;
+}
+
+nav ol, nav ul {
+	padding: 0;
+}
+
+dt {
+	font-weight: 400;
+}
+
+.inline-list {
+	padding: 0;
+	> li {
+		@include inlineBlock;
+		vertical-align: middle;
+		padding-right: $gutter-size;
+		list-style-type: none;
+	}
+}
+
+.unstyled-list { 
+	// padding: 0; 
+	> li { 
+		list-style: none; 
+	}
+}

@@ -1,0 +1,21 @@
+img { 
+	max-width: 100%; 
+	height: auto;
+	vertical-align: middle;
+}
+
+.img-rounded {
+	@if $border-radius > 0 {
+     	@include border-radius($border-radius);
+    }
+}
+
+.img-circle {
+	@include border-radius(50%);
+}
+
+.img-framed {
+	padding: 4px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}

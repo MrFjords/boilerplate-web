@@ -1,0 +1,18 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: pxToEm(0 0 $bottom-margin);
+}
+th, td {
+  padding: 0.25rem;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.table-alt {
+	border: none;
+	th, td {
+		border: none;
+		border-bottom: 1px solid #ccc;
+	}
+}

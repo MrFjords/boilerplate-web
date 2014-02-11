@@ -1,0 +1,42 @@
+%altFontFamily {
+	font-family: $font-family-alt;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6, { 
+	@extend %altFontFamily; 
+	line-height: 1.2; 
+	font-weight: normal; 
+	color: $heading-color;
+}
+
+.lead {
+	font-size: pxToEm(20px);
+}
+
+.hgroup { 
+	margin: pxToEm(0 0 $bottom-margin); 
+	// overflow: hidden; 
+	> * { 
+	 	margin: 0; 
+	 }
+}
+
+%truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate {
+	@extend %truncate;
+}
+
+.font-alt { @extend %altFontFamily; }
+.text-left, .align-left { text-align: left; }
+.text-right, .align-right { text-align: right; }
+.text-center, .align-center { text-align: center; }
+.text-justify { text-align: justify; }
+.uppercase { text-transform: uppercase; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }

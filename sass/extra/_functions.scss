@@ -1,0 +1,42 @@
+//**
+// * Convert px to em
+// *
+// * @param $elFontSize - the element font size in pixel e.g. you want to set margin on your text, 
+// * and font size on your text is equivalent to 14px, then your context is 14px.
+// *
+// * @param $values - the values in pixel you want to convert. 
+// * You can pass in an array of values. Each value separated by space.
+// *
+// * e.g. margin: pxToEm(16px 20px 20px 16px, 16px);
+// * 
+// */
+$baseFontSize:  $font-size;
+@function pxToEm ($values, $elFontSize: $baseFontSize) {
+  $list: ();
+
+  @each $value in $values {
+    @if ($value == 0 or $value == auto) {
+      $list: append($list, $value);
+    } @else {
+      $emValue: ($value/$elFontSize)+em;
+      $list: append($list, $emValue);
+    }
+  }
+  @return $list;
+}
+
+//**
+// * Convert font-size from px to rem with px fallback
+// *
+// * @param $size - the value in pixel you want to convert
+// *
+// * e.g. p {@include fontSize(12px);}
+// * 
+// */
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  //Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}

@@ -1,0 +1,110 @@
+$grid-gutter-width:		15px !default;
+$grid-columns:          12 !default;
+
+$gutter-size: 			10px !default;
+$gutter:				$gutter-size;
+
+$screen-xs-min: 		480px !default;
+$screen-sm-min: 		760px !default;
+$screen-md-min: 		960px !default;
+$screen-lg-min: 		1500px !default;
+
+.show-grid {
+	margin-bottom: $bottom-margin;
+	& [class^=col-] {
+		padding-top: pxToEm($gutter-size);
+		padding-bottom: pxToEm($gutter-size);
+		background-color: lighten($primary-color, 20%);
+		background-color: rgba(lighten($primary-color, 20%),.15);
+		border: 1px solid $primary-color;
+		border: 1px solid rgba($primary-color,.2);
+	}
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  @include make-row();
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid-columns-float(xs);
+@include make-grid($grid-columns, xs, width);
+@include make-grid($grid-columns, xs, pull);
+@include make-grid($grid-columns, xs, push);
+@include make-grid($grid-columns, xs, offset);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: pxToEm($screen-sm-min)) {
+  @include make-grid-columns-float(sm);
+  @include make-grid($grid-columns, sm, width);
+  @include make-grid($grid-columns, sm, pull);
+  @include make-grid($grid-columns, sm, push);
+  @include make-grid($grid-columns, sm, offset);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: pxToEm($screen-md-min)) {
+  @include make-grid-columns-float(md);
+  @include make-grid($grid-columns, md, width);
+  @include make-grid($grid-columns, md, pull);
+  @include make-grid($grid-columns, md, push);
+  @include make-grid($grid-columns, md, offset);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: pxToEm($screen-lg-min)) {
+  @include make-grid-columns-float(lg);
+  @include make-grid($grid-columns, lg, width);
+  @include make-grid($grid-columns, lg, pull);
+  @include make-grid($grid-columns, lg, push);
+  @include make-grid($grid-columns, lg, offset);
+}
+
+// .row {
+	
+// }
+
+// .show-grid [class^=col-] {
+// 	padding-top: 10px;
+// 	padding-bottom: 10px;
+// 	background-color: lighten($primary-color, 20%);
+// 	background-color: rgba(lighten($primary-color, 20%),.15);
+// 	border: 1px solid $primary-color;
+// 	border: 1px solid rgba($primary-color,.2);
+// }
+
+// %col-common {
+// 	position: relative;
+// 	min-height: 1px;
+// 	padding-left: $gutter;
+// 	padding-right: $gutter;
+// }

@@ -1,0 +1,61 @@
+// Use Compass
+@import "compass";
+
+// Import fonts from Google
+// @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+// Set variables, functions and mixins
+@import "config";
+@import "extra/functions";
+@import "extra/mixins";
+
+// Reset using Normalize
+@import "normalize";
+
+// Use parts on HTML5 Boilerplate
+@import "boilerplate";
+
+*, *:before, *:after {
+    // -webkit-font-smoothing: antialiased;
+    // @include box-sizing(border-box);
+    @include box-sizing(border-box);
+}
+
+html { 
+	background-color: $background-color; 
+}
+
+body { 
+	font-family: $font-family; 
+	@include fontSize($font-size); 
+	font-weight: 300;
+}
+
+@import "base/grid";
+@import "base/type";
+@import "base/links";
+@import "base/images";
+@import "base/lists";
+@import "base/tables";
+@import "base/blockquote";
+@import "base/forms";
+
+// Specific project styles, add any section specific sass modules here
+@import "elements/buttons";
+@import "elements/callouts";
+@import "elements/media";
+
+@import "base/layout";
+@import "extra/responsive-utilities";
+@import "base/helpers";
+
+
+// Additional styles to think about
+// @import "print";
+
+// If IE support is needed
+// @import "ie";
+
+// For anything quick and dirty that needs thrown in
+// @import "shame";

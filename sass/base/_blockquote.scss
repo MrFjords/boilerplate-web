@@ -1,0 +1,19 @@
+blockquote {
+	font-size: pxToEm(20px);
+	font-style: italic;
+	p {
+		margin: pxToEm(0 0 5px, 20px);
+	}
+	cite, footer {
+		display: block;
+		font-size: pxToEm(18px, 20px);
+		font-style: normal;
+		text-align: right;
+	}
+}
+
+.pullquote {
+	margin: pxToEm($bottom-margin 0, 20px);
+	padding: pxToEm(0 $gutter-size, 20px);
+	border-left: 5px solid $primary-color;
+}

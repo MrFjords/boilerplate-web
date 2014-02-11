@@ -1,0 +1,12 @@
+{
+  "name": "boilerplate-web",
+  "version": "0.1.0",
+  "author": "David Brown",
+  "description": "This is my starting point for vanilla websites based on what I feel are best practices found across the web",
+  "devDependencies": {
+    "grunt": "latest",
+    "matchdep": "*",
+    "grunt-contrib-compass": "~0.7.1",
+    "grunt-contrib-cssmin": "~0.7.0"
+  }
+}

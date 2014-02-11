@@ -1,0 +1,50 @@
+fieldset {
+    margin: 0 pxToEm(2px);
+}
+
+button, input, select, textarea {
+    margin: pxToEm(0 0 $bottom-margin);
+    vertical-align: baseline; 
+    *vertical-align: middle; 
+
+}
+
+textarea {
+	vertical-align: top;
+}
+
+input, textarea {
+    @include box-sizing(border-box);
+	width: 100%;
+    padding: pxToEm(5px 10px);
+    border: 1px solid #AAA;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    @if $border-radius > 0 {
+     	@include border-radius($border-radius);
+    } 
+    @include placeholder {
+        font-style: italic;
+    }
+    &:focus {
+        box-shadow: 0 0 5px $highlight-color;
+        border-color: $highlight-color;
+    }
+}
+
+input[type="button"], input[type="submit"] {
+    width: auto;
+}
+
+label {
+	display: block;
+	font-weight: 400;
+    margin-bottom: pxToEm(5px);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: auto;
+}
