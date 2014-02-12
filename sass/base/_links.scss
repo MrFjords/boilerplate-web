@@ -3,9 +3,9 @@
  		color: $link-color;
  	}
  	&:hover, &:focus { 
- 		color: darken($link-color, 10%); 
+ 		color: $link-color-hover; 
  	}
  	&:active {
- 		color: lighten($link-color, 10%);	
+ 		color: $link-color-active;	
  	}
  }

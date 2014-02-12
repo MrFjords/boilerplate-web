@@ -35,7 +35,7 @@
     
             </div> -->
 
-            <div>
+            <!-- <div>
                 <h2 class="sr-title">Primary font</h2> 
                 <p>Primary font: Verdana, Geneva, sans-serif</p>
                 <p><em>Primary font italic: Verdana, Geneva, sans-serif</em></p>
@@ -47,7 +47,7 @@
                 <p class="font-alt">Secondary font: "Lucida Bright", Georgia, serif</p>
                 <p class="font-alt"><em>Secondary font italic: "Lucida Bright", Georgia, serif</em></p>
                 <p class="font-alt"><strong>Secondary font bold: "Lucida Bright", Georgia, serif</strong></p>
-            </div>    
+            </div>  -->   
 
             <div>
                 <h2 class="sr-title">Headings</h2>

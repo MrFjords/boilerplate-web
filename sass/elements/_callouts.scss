@@ -6,37 +6,22 @@
 	@include border-radius($border-radius); 
 }
 
-.callout {
-	@extend %callout;
-	border-color: $primary-color;
-	background-color: lighten($primary-color, 20%);
-	background-color: rgba(lighten($primary-color, 20%), .15);
-	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-		color: $primary-color;
-	}
-}
-
 .callout-title {
 	@include fontSize(20px);
 	margin: pxToEm(0 0 10px, 20px);
 }
 
+.callout {
+	@extend %callout;
+	@include calloutStyle($callout-border-color, $callout-bg-color, $callout-title-color);
+}
+
 .callout-alt {
 	@extend %callout;
-	border-color: $secondary-color;
-	background-color: lighten($secondary-color, 20%);
-	background-color: rgba(lighten($secondary-color, 20%), .15);
-	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-		color: $secondary-color;
-	}
+	@include calloutStyle($callout-border-color-alt, $callout-bg-color-alt, $callout-title-color-alt);
 }
 
 .callout-other {
 	@extend %callout;
-	border-color: $tertiary-color;
-	background-color: lighten($tertiary-color, 20%);
-	background-color: rgba(lighten($tertiary-color, 20%), .15);
-	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-		color: $tertiary-color;
-	}
+	@include calloutStyle($tertiary-color, lighten($tertiary-color, 20%), $tertiary-color);
 }
